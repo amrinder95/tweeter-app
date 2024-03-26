@@ -2,9 +2,10 @@ header {
   padding-top: 120px;
   height: 400px;
   width: 100%;
+  margin: auto;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
   background-color: rgb(78, 138, 101);
   background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png");

@@ -4,7 +4,7 @@ nav {
   height: 120px;
   width: 100%;
   background-color: #4056A1;
-  color: #ffffff;
+  color: rgba(78, 138, 101, 0.5);
   padding: 0 1.5em;
   align-items: center;
   position: fixed;
@@ -27,8 +27,9 @@ nav a {
 
 div.new-tweet {
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
-  align-items: center;
-  flex-wrap: wrap;
+}
+
+.fa-solid.fa-angles-down {
+  align-self: center;
 }

@@ -23,3 +23,12 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+ .container {
+  display: flex;
+  margin: auto;
+  width: 90%;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #f4f1ec;
+ }
