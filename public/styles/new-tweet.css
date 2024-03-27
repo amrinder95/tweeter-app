@@ -44,3 +44,7 @@ border-bottom: 3px solid;
 #char-count.negative {
   color: rgb(158, 11, 11);
 }
+
+#tweet-container {
+  width: 100%;
+}

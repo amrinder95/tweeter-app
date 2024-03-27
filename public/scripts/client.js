@@ -8,16 +8,30 @@ $(document).ready(function() {
   $('#newtweet-form').on("submit", function(event) {
     event.preventDefault();
     let $formData = $(this).serialize();
+    if ($formData.length <= 5) {
+      alert('Incorrect submission. You must enter atleast 1 character.');
+      return error;
+    }
+    if ($formData.length >= 145) {
+      alert('Incorrect submission. You must enter 140 characters or less.')
+      return error;
+    }
     $.ajax({
       method: 'POST',
       url:'http://localhost:8080/tweets',
-      data: $formData
+      data: $formData,
+      success: (data) => {
+        console.log('Your tweet is now posted!')
+      },
+      fail: (error) => {
+        console.log(error);
+      }
     })
   }); 
   const renderTweets = function (arrayOfTweetObjects) {
     for(let tweetObject of arrayOfTweetObjects) {
       let $tweet = createTweetElement(tweetObject);
-      $('#tweet-container').append($tweet);
+      $('#tweet-container').prepend($tweet);
     }
   }
   const createTweetElement = function (tweetObject) {
@@ -42,10 +56,13 @@ $(document).ready(function() {
   }
   const loadTweets = function() {
     $.ajax({
-      method: "GET",
-      url:'http://localhost:8080/tweets',
+      method: 'GET',
+      url: 'http://localhost:8080/tweets',
       success: (data) => {
-        renderTweets(data);
+        renderTweets(data)
+      },
+      fail: (error) => {
+        console.log(error);
       }
     })
   }
