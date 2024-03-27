@@ -38,3 +38,7 @@ label {
   color: #4056A1;
   border: 1px solid #4056A1;
 }
+
+#char-count.negative {
+  color: rgb(158, 11, 11);
+}
