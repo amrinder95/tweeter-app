@@ -10,6 +10,7 @@ header {
 }
 .avatar {
   height: 70%;
+  padding-top: 10px;
 }
 .avatar-name {
   height: 15%;

@@ -24,11 +24,17 @@ label {
 
 #tweet-text {
   margin-top: 5px;
+  padding: 20px;
 }
 
 .tweet-btn {
   background-color: #4056A1;
   border: none;
-  color: #f4f1ec
+  color: #f4f1ec;
+}
 
+.tweet-btn:hover {
+  background-color: #f4f1ec;
+  color: #4056A1;
+  border: 1px solid #4056A1;
 }
