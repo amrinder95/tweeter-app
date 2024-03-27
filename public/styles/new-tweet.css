@@ -1,4 +1,4 @@
-section {
+section.tweet-form {
   width: 100%;
   text-align: center;
   font-family: "Source sans 3", sans-serif;
@@ -9,7 +9,6 @@ form {
 }
 
 label {
-  border-bottom: 3px solid;
   width: 100%;
   text-align: start;
   padding-bottom: 5px;
@@ -23,8 +22,11 @@ label {
 }
 
 #tweet-text {
-  margin-top: 5px;
-  padding: 20px;
+background-color: transparent;
+border-top: none;
+border-left: none;
+border-right: none;
+border-bottom: 3px solid;
 }
 
 .tweet-btn {
