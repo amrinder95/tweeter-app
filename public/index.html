@@ -49,7 +49,7 @@
   </header>
 
     <!-- Page-specific (main) content here -->
-    <main class="container">
+    <main class="container" id="tweet-container">
       <section class="tweet-form">
         <h2>Compose Tweet</h2>
         <form action="/tweets/" method="POST">
@@ -60,21 +60,6 @@
             <output id="char-count" name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
-      </section>
-      <section class="tweet-show">
-        <header class="tweet-header">
-          <p id="tweet-name"><img id="tweet-avatar"src="./images/profile-hex.png" alt="">Name Here</p>
-          <p id="tweet-handle">@TweeterHandle</p>
-        </header>
-        <article>Tweet here: Lorem ipsum dolor sit amet consectetur adipisicing elit.</article>
-        <footer id="tweet-footer">
-          <p>Timestamp</p>
-          <p>
-            <i class="fa-solid fa-flag"></i>
-            <i class="fa-solid fa-retweet"></i>
-            <i class="fa-solid fa-heart"></i>
-          </p>
-        </footer>
       </section>
     </main>
   </body>
