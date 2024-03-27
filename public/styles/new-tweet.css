@@ -1,0 +1,34 @@
+section {
+  width: 100%;
+  text-align: center;
+  font-family: "Source sans 3", sans-serif;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  border-bottom: 3px solid;
+  width: 100%;
+  text-align: start;
+  padding-bottom: 5px;
+}
+
+.tweet-text-footer {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Bungee", sans-serif;
+  margin-top: 5px;
+}
+
+#tweet-text {
+  margin-top: 5px;
+}
+
+.tweet-btn {
+  background-color: #4056A1;
+  border: none;
+  color: #f4f1ec
+
+}

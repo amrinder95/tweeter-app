@@ -2,12 +2,26 @@ header {
   padding-top: 120px;
   height: 400px;
   width: 100%;
-  margin: auto;
   display: flex;
   flex-direction: column;
-  justify-content: start;
   align-items: center;
-  background-color: rgb(78, 138, 101);
+  background-color: rgb(197, 193, 173);
   background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png");
-/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+.avatar {
+  height: 70%;
+}
+.avatar-name {
+  height: 15%;
+  width: 25%;
+  text-align: center;
+}
+
+.avatar-name h2 {
+  margin: 0;
+  font-family: "Source sans 3", sans-serif;
+}
+
+.pfp {
+  height: 100%;
 }
