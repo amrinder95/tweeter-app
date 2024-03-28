@@ -28,10 +28,8 @@ $(document).ready(function() {
         $('.error-message').slideUp(500);
         loadTweets();
         $('#newtweet-form').trigger('reset');
-        console.log('Your tweet is now posted!')
       },
       fail: (error) => {
-        console.log(error);
         alert("Something went wrong with your request.")
       }
     })
@@ -79,7 +77,7 @@ const loadTweets = function() {
       renderTweets(data)
     },
     fail: (error) => {
-      console.log(error);
+      alert("Something went wrong with your request.")
     }
   })
 }
