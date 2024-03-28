@@ -9,4 +9,16 @@ $(document).ready(function() {
     $('.tweet-form').slideToggle(500);
     $('#tweet-text').focus();
   });
+  let returnTopBtn = document.getElementById('scrollbuttonid');
+  window.addEventListener("scroll", function() {
+    if(this.document.body.scrollTop > 20 || this.document.documentElement.scrollTop > 20) {
+      returnTopBtn.style.display = 'block';
+    } else {
+      returnTopBtn.style.display = 'none';
+    }
+  });
+  $("#scrollbuttonid").on("click", function() {
+    $('.tweet-form').slideToggle(500);
+    $('#tweet-text').focus();
+  })
 });
