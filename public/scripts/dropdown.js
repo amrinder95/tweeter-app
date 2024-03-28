@@ -18,7 +18,8 @@ $(document).ready(function() {
     }
   });
   $("#scrollbuttonid").on("click", function() {
-    $('.tweet-form').slideToggle(500);
+    $(window).scrollTop(0)
+    $('.tweet-form').slideDown(500);
     $('#tweet-text').focus();
   })
 });
