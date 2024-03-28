@@ -30,6 +30,6 @@ div.new-tweet {
   flex-direction: column;
 }
 
-.fa-solid.fa-angles-down {
+.fa-solid {
   align-self: center;
 }

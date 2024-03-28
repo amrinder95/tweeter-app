@@ -6,15 +6,18 @@
 
 $(document).ready(function() {
   $('#newtweet-form').on("submit", function(event) {
+    $('.error-message').slideUp(500);
     event.preventDefault();
     let $formData = $(this).serialize();
     let tweetLength = $('#tweet-text').val().length;
     if (tweetLength <= 0) {
-      alert('Incorrect submission. You must enter atleast 1 character.');
+      $('.error').text('Incorrect submission. You must enter atleast 1 character.')
+      $('.error-message').slideDown(500);
       return false;
     }
     if (tweetLength >= 140) {
-      alert('Incorrect submission. You must enter 140 characters or less.')
+      $('.error').text('Incorrect submission. You cannot enter more than 140 characters.')
+      $('.error-message').slideDown(500,);
       return false;
     }
     $.ajax({
@@ -22,6 +25,7 @@ $(document).ready(function() {
       url:'http://localhost:8080/tweets',
       data: $formData,
       success: (data) => {
+        $('.error-message').slideUp(500);
         loadTweets();
         console.log('Your tweet is now posted!')
       },

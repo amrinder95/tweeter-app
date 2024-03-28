@@ -49,3 +49,20 @@ border-bottom: 3px solid;
 #tweet-container {
   width: 100%;
 }
+
+.error-message{
+  color: rgb(158, 11 , 11);
+  border: 5px solid;
+  border-radius: 5px;
+  width: 100%;
+  padding: 7px;
+  text-align: center;
+}
+
+.er {
+  display: none;
+}
+
+.error{
+  font-family: "Source sans 3", sans-serif;
+}
