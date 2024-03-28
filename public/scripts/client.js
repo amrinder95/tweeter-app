@@ -8,19 +8,21 @@ $(document).ready(function() {
   $('#newtweet-form').on("submit", function(event) {
     event.preventDefault();
     let $formData = $(this).serialize();
-    if ($formData.length <= 5) {
+    let tweetLength = $('#tweet-text').val();
+    if (tweetLength <= 0) {
       alert('Incorrect submission. You must enter atleast 1 character.');
-      return error;
+      return false;
     }
-    if ($formData.length >= 145) {
+    if (tweetLength >= 140) {
       alert('Incorrect submission. You must enter 140 characters or less.')
-      return error;
+      return false;
     }
     $.ajax({
       method: 'POST',
       url:'http://localhost:8080/tweets',
       data: $formData,
       success: (data) => {
+        loadTweets();
         console.log('Your tweet is now posted!')
       },
       fail: (error) => {
