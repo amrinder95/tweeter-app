@@ -33,3 +33,7 @@ div.new-tweet {
 .fa-solid {
   align-self: center;
 }
+
+.fa-solid.double-angles-down:hover {
+  color:maroon;
+}

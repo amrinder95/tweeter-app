@@ -3,6 +3,7 @@ section.tweet-form {
   text-align: center;
   font-family: "Source sans 3", sans-serif;
   margin-top: 2em;
+  display: none;
 }
 form {
   display: flex;
