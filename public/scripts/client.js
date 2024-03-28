@@ -6,28 +6,28 @@
 
 $(document).ready(function() {
   $('#newtweet-form').on("submit", function(event) {
-    $('.error-message').slideUp(500);
+    $('.error-message').slideUp(500); //incase a previous error message is displayed, slideup so user can be aware if a new error is made
     event.preventDefault();
     let $formData = $(this).serialize();
     let tweetLength = $('#tweet-text').val().length;
     if (tweetLength <= 0) {
-      $('.error').text('Incorrect submission. You must enter atleast 1 character.')
+      $('.error').text('Incorrect submission. You must enter atleast 1 character.') //error handling
       $('.error-message').slideDown(500);
       return false;
     }
-    if (tweetLength >= 140) {
-      $('.error').text('Incorrect submission. You cannot enter more than 140 characters.')
+    if (tweetLength > 140) {
+      $('.error').text('Incorrect submission. You cannot enter more than 140 characters.') //error handling
       $('.error-message').slideDown(500,);
       return false;
     }
-    $.ajax({
+    $.ajax({ 
       method: 'POST',
       url:'http://localhost:8080/tweets',
       data: $formData,
       success: (data) => {
         $('.error-message').slideUp(500);
         loadTweets();
-        $('#newtweet-form').trigger('reset');
+        $('#newtweet-form').trigger('reset');  //reset form after tweet submission
       },
       fail: (error) => {
         alert("Something went wrong with your request.")
@@ -37,6 +37,7 @@ $(document).ready(function() {
   loadTweets();
 });
 
+//helper functions
 const renderTweets = function (arrayOfTweetObjects) {
   for(let tweetObject of arrayOfTweetObjects) {
     let $tweet = createTweetElement(tweetObject);
@@ -44,7 +45,7 @@ const renderTweets = function (arrayOfTweetObjects) {
   }
 }
 const createTweetElement = function (tweetObject) {
-  let escapeHTML = function(text) {
+  let escapeHTML = function(text) {     //XSS prevention
     return $('<div>').text(text).html();
   }
   let tweetText = tweetObject.content.text;
