@@ -27,6 +27,7 @@ $(document).ready(function() {
       success: (data) => {
         $('.error-message').slideUp(500);
         loadTweets();
+        $('#newtweet-form').trigger('reset');
         console.log('Your tweet is now posted!')
       },
       fail: (error) => {
