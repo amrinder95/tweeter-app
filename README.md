@@ -23,3 +23,11 @@ Tweeter is a simple, single-page Twitter clone.
 - Bodyparser
 - Chance
 - MD5
+
+## Screenshots
+!["Desktop view with tweet form"](https://github.com/amrinder95/tweeter-app/blob/master/docs/desktop-tweet-form.png?raw=true)
+!["Desktop view error message"](https://github.com/amrinder95/tweeter-app/blob/master/docs/desktop-error.png?raw=true)
+!["Return to top button"](https://github.com/amrinder95/tweeter-app/blob/master/docs/desktop-tweets-returnbtn.png?raw=true)
+!["Mobile view"](https://github.com/amrinder95/tweeter-app/blob/master/docs/mobile-tweet-box.png?raw=true)
+!["Mobile view with tweet form"](https://github.com/amrinder95/tweeter-app/blob/master/docs/mobile-tweet-form.png?raw=true)
+!["Mobile view char-counter"](https://github.com/amrinder95/tweeter-app/blob/master/docs/mobile-too-many-chars.png?raw=true)
