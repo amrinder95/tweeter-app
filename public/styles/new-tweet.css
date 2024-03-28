@@ -32,15 +32,15 @@ border-bottom: 3px solid;
 }
 
 .tweet-btn {
-  background-color: #4056A1;
+  background-color: rgb(126, 77, 158);
   border: none;
   color: #f4f1ec;
 }
 
 .tweet-btn:hover {
   background-color: #f4f1ec;
-  color: #4056A1;
-  border: 1px solid #4056A1;
+  color: rgb(126, 77, 158);
+  border: 1px solid rgb(126, 77, 158);
 }
 
 #char-count.negative {
@@ -66,4 +66,24 @@ border-bottom: 3px solid;
 
 .error{
   font-family: "Source sans 3", sans-serif;
+}
+
+@media only screen and (min-width: 1024px) {
+  #tweet-page {
+    margin-top: 170px;
+    margin-right: 50px;
+    margin-left: 25px;
+  }
+
+  .tweet-btn {
+    background-color: #4056A1;
+    border: none;
+    color: #f4f1ec;
+  }
+  
+  .tweet-btn:hover {
+    background-color: #f4f1ec;
+    color: #4056A1;
+    border: 1px solid #4056A1;
+  }
 }

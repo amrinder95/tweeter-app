@@ -48,3 +48,14 @@ article {
   align-items: center;
 }
 
+.fa-flag:hover {
+  color: rgb(158, 11, 11);
+}
+
+.fa-retweet:hover {
+  color: rgb(158, 11, 11);
+}
+
+.fa-heart:hover {
+  color: rgb(158, 11, 11);
+}

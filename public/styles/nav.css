@@ -3,8 +3,9 @@ nav {
   justify-content: space-between;
   height: 120px;
   width: 100%;
-  background-color: #4056A1;
-  color: rgba(197, 193, 173, 0.5);
+  background-color: rgb(126, 77, 158);
+  background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png");
+  color: white;
   padding: 0 1.5em;
   align-items: center;
   position: fixed;
@@ -57,4 +58,11 @@ div.new-tweet {
 
 .scrollbutton:hover {
   transform: scale(1.1);
+}
+
+@media only screen and (min-width: 1024px) {
+  nav {
+    background-color: #4056A1;
+    background-image: none;
+  }
 }
